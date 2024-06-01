@@ -1,0 +1,41 @@
+New access credential added to Application or Service Principal
+
+Investigation Findings:  
+This will alert when an admin or app owner account adds a new credential to an Application or Service Principal where a verify KeyCredential was already present for the app. If a threat actor obtains access to an account with sufficient privileges and adds the alternate authentication material triggering this event, the threat actor can now authenticate as the Application or Service Principal using this credential. Additional information on OAuth Credential Grants can be found in RFC 6749 Section 4.4 or https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow For further information on AuditLogs please see https://docs.microsoft.com/azure/active-directory/reports-monitoring/reference-audit-activities.
+
+Event query:
+TimeGenerated [UTC]	
+OperationName		
+InitiatingUserOrApp		
+InitiatingIpAddress	
+UserAgent		
+targetDisplayName	
+targetId		
+Category		
+
+I reviewed audit logs for xxxx. On xxx UTC, user elevated his/her privilleges (PIM) to Update application – Certificates and secrets management on the target application SharepointAPI-Test. 
+
+The following steps were implemented:
+(example)
+Activity Type	Add owner to application
+Activity Type	Add service principal
+Activity Type	Update service principal
+Activity Type	Update application
+Activity Type	Update service principal
+Activity Type	Update application – Certificates and secrets management 
+Activity Type	Update application
+Activity Type	Update service principal
+Activity Type	Update application – Certificates and secrets management 
+
+The IP address xxx used by user is connected to a _______ ISP located in xxxx. It has not been reported for abuse.
+
+This is appears to be expected activity. I observed no suspicious activity. 
+
+Recommended Actions/Next Steps:  
+No recommended actions at this time. Event is Benign.
+
+Resolution:
+No further actions are required for containment. 
+
+ 
+Additional Notes: 

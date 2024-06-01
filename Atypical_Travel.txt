@@ -1,0 +1,41 @@
+Atypical travel
+
+Investigation Findings:  
+ADD EVENT QUERY INFO
+
+This risk event type identifies two sign-ins originating from geographically distant locations, where at least one of the locations may also be atypical for the user, given past behavior. Among several other factors, this machine learning algorithm takes into account the time between the two sign-ins and the time it would have taken for the user to travel from the first location to the second, indicating that a different user is using the same credentials. The algorithm ignores obvious \"false positives\" contributing to the impossible travel conditions, such as VPNs and locations regularly used by other users in the organization. The system has an initial learning period of the earliest of 14 days or 10 logins, during which it learns a new user's sign-in behavior.
+
+On xxxx UTC, user failed a sign-in attempt from IP address XXX, user agent XXX. Client app XXX. Error code XXX. 
+On xxx UTC, user's sign-in was interrupted.
+
+At XXX, user successfully signed in with MFA via IP XXX, user agent XXX. 
+
+Subsequent sign-ins to the IP XXX were successful after MFA was completed in Azure AD. User commonly signs-in from XXXX 
+
+IP address XXX is connected to a XXXX ISP located in XXXX. It has not been reported for abuse. This IP address is a VPN Connection. VPNs can mask the actual location and can make geo-location difficult to track and result in alerts like this. Alert does not appear to be atypical travel.
+
+Audit logs indicate no suspicious activity. No evidence of compromised user account. We will continue to monitor account.
+
+Recommended Actions/Next Steps:  
+No recommended actions at this time. 
+
+Resolution:
+No further actions are required for containment.
+
+Additional Useful Language: 
+The IP address xx is associated with an AT&T Mobility ISP and has not been reported for abuse. Azure reports the ISP addresses in one location, open-source information reports them in another. Since IP geolocation links to an IP address rather than a physical address, the location shown may be that of the ISP. This difference in information could have contributed to triggering the alert.
+
+IP address xxx.xxx.xxx.xxx is connected to a XXXX ISP located in CITY, STATE. It has not been reported for abuse. This IP address is a VPN Connection. VPNs can mask the actual location and can make geo-location difficult to track and result in alerts like this. (Atypical travel)
+
+User was previously signing in using Single-factor authentication but is now required to use MFA. Audit logs indicate user successfully changed her password on xxxxxxx. 
+
+The IP xxx is connected to a xxxx ISP. It has not been reported for abuse. AbuseIpDb.com reports it's location as xxx, while Azure reports it as xxx. Because IP geolocation links to an IP address, rather than a physical address, it's possible that the location shown is that of the ISP. This does not appear to be atypical travel, rather the ISP addresses are reported by Azure in a location while open source informaion reports another. This difference in information may have been a contributing cause for triggering the alert. 
+
+Notes on SPROUT accounts: 
+Per Jesse Precht 3/28/2023 email-"the sprout_admin accounts are used for application testing across the team members. "
+ 3/31/2023 email -"we have contractors located in Costa Rica that make use of the shared sprout_admin accounts for application testing"
+
+"The sign-in logs show that there have been many sign-in attempts from IP addresses located all over the world. This is an expected behavior as the sprout_admin accounts are used for application testing across team members. Since this is a service account, the customer has permitted single-factor authentication. Single-factor authentication is a security process that requires only one form of verification, such as a password, to gain access to online resources. It is a simple and common method of authentication, but it is also the least secure as it only requires one factor for verification. It is recommended to use multi-factor authentication (MFA) or two-factor authentication (2FA) for added security."
+
+
+“The sign-in records for the user ______ indicate numerous login attempts originating from IP addresses worldwide. This behavior is expected, as the sprout_admin accounts serve application testing purposes across team members. Given that this is a service account, the customer has authorized single-factor authentication. Single-factor authentication is a basic and widely used security method that requires only one form of verification, typically a password, to access online resources. However, it is considered less secure because it relies on a single factor. For enhanced security, it is recommended to adopt multi-factor authentication (MFA) or two-factor authentication (2FA).”

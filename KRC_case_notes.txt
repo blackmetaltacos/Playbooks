@@ -1,0 +1,25 @@
+KRC  
+Email reported by user as malware or phish
+
+Investigation Findings:  
+This alert is triggered when any email message is reported as malware or phish by user
+
+Recipients		xxxxxxxx
+Submitter 		xxxxxxx
+
+Sender Email
+Sender Domain					
+Sender IP		
+Subject				
+CreationTime		
+
+Alert was generated due to user reporting an email as phishing. Upon further investigation it seems that the email is promotional spam for a company called xxxxxxxxx. The user did not interact with any of the URLs within the email and as a precautionary measure, it has been soft deleted out of the users inbox. No further action required.
+
+
+Recommended Actions/Next Steps:  
+No recommended actions at this time. Event is Benign.
+
+Resolution:
+No further actions are required for containment. 
+
+Additional Notes: 

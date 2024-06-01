@@ -1,0 +1,36 @@
+MFA Rejected by User
+
+Investigation Findings:  
+Identifies accurances where a user has rejected an MFA prompt. This could be an indicator that a threat actor has compromised the username and password of this user account and is using it to try and log into the account.
+
+On XXXXXX UTC, user failed a sign-in into the XXXX app because of error code XXX, via IP XXX. 
+
+At XXX, user successfully signed in after MFA was completed in Azure AD. User agent XXXX. 
+
+The IP address XXX is connected to a ______ ISP located in XXXX. This IP address is a VPN Connection. It has not been reported for abuse. The IP address is widely used within the organization (confirm).
+
+Reviewed sign-in logs and Audit logs observed no indication of suspicious activity. Failed sign-ins followed by successful sign-ins with MFA. No evidence of compromised user account. We will continue to monitor account. 
+
+Closing Notes:
+This alert involved two (2) entities
+
+and
+
+Reviewed sign-in logs and Audit logs observed no indication of suspicious activity.  No evidence of compromised user accounts. We will continue to monitor accounts. 
+
+Recommended Actions/Next Steps:  
+No recommended actions at this time. Event is Benign.
+
+Resolution:
+No further actions are required for containment. 
+ 
+Additional Notes: 
+*Cato Networks Inc. ISP is VPN used by AHS work-from-home clients
+
+*The user didn't initially complete the MFA prompt. They may have decided not to authenticate, timed out while doing other work, or has an issue with their authentication setup. Subsequent sign-ins were with MFA requirement being satisfied.
+
+Audit logs indicate no suspicious activity. No evidence of compromised user account. We will continue to monitor account.
+---------------
+Public IPv6 addresses may implement the SLAAC privacy extension. With this, the interface identifier is randomly generated. The SLAAC privacy extension also implements a time out, which is configurable, so that the IPv6 interface addresses will be discarded and a new interface identifier is generated. SLAAC (Stateless Address Autoconfiguration) -  It was designed to be a simpler and more straight-forward approach to IPv6 auto-addressing. In its current implementation as defined in RFC 4862, SLAAC does not provide DNS server addresses to hosts and that is why it is not widely adopted at the moment. 
+
+IP address XXX is connected to a XXXX ISP located in XXXX. It has not been reported for abuse. This IP address is a VPN Connection. VPNs can mask the actual location and can make geo-location difficult to track and result in alerts like this.

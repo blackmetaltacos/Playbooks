@@ -1,0 +1,38 @@
+Managed SOC: User Assigned Privileged Role 
+
+Description of Alert:
+User Assigned Privileged Role
+
+Investigation Findings:
+Identifies when a new privileged role is assigned to a user. Any account eligible for a role is now being given privileged access. If the assignment is unexpected or into a role that isn't the responsibility of the account holder, investigate.
+
+Audit logs and event query information combined and reviewed:
+
+TimeGenerated [UTC]	
+Identity				
+Role	Activation		
+Reason				
+IP					
+Target				
+Reason
+-------------------------------------
+
+Azure AD Privileged Identity Management (PIM) enables you to limit standing admin access to privileged roles, discover who has access, and review privileged access.
+
+What is Netwrix used for?
+It helps organizations track changes and access events across the IT environment, e.g. modifications in security configurations, systems, permissions and data, and provides information as a set of reports.
+
+The audit logs and queries confirm that the activities were within the scope of the user’s job and were expected. The user’s escalation has been resolved. No suspicious activity was detected, closing alert.
+
+Recommended Actions/Next Steps:  
+No recommended actions at this time. Event is Benign.
+
+Resolution:
+No further actions are required for containment. 
+
+Additional useful language:
+The user’s escalation is currently active but will not exceed 8 hours.
+
+
+
+ 

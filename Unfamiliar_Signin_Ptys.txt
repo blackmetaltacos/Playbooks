@@ -1,0 +1,67 @@
+Unfamiliar sign-in properties
+
+Investigation Findings:  
+The following properties of this sign-in are unfamiliar for the given user: ASN, Browser, Device, IP, Location, EASId, TenantIPsubnet.
+
+Unfamiliar Client IP Address: XXXXXXXXXX.
+
+This risk event type considers past sign-in properties (e.g. device, location, network) to determine sign-ins with unfamiliar properties. The system stores properties of previous locations used by a user, and considers these \"familiar\". The risk event is triggered when the sign-in occurs with properties not already in the list of familiar properties. The system has an initial learning period of 30 days, during which it does not flag any new detections.
+
+On xxxx, xxxxxxxxx UTC, user signed in from IP address xxxxxxxxxxx, after MFA was completed in Azure AD, user agent xxxxx, using (single-factor/MFA) authentication. Client app xxxxx. This is the first time this IP is seen used by user.
+
+The IP address XXX is connected to a Cato Networks Inc. ISP located in XXXX. This IP address is a VPN Connection. It has not been reported for abuse. The IP address is frequently utilized within the organization
+-------------------------------
+Additional useful language:
+This is the first time this IP is seen used by user, and first-time using MFA. Previous sign-ins were using Single-factor authentication. IP address xxxx, is connected to an xxxx ISP.  It has not been reported for abuse. 
+
+At xxxxx, user successfully signed in using Single-factor authentication. This appears to a service account which accounts for why customer is allowing conditioanl access with Single-factor authentication. We recommend our customers to move to modern authentication. 
+
+IP addressxxxxxxxxxxx is connected to a xxxxxxxx ISP and has not been reported for abuse. This is the first instance of this IP being utilized within the organization.
+
+Azure provides one location for reporting ISP addresses, while open-source information reports them in a different location. Because IP geolocation is tied to an IP address rather than a physical address, the displayed location might correspond to that of the ISP. This discrepancy in information could potentially be a factor in triggering the alert.
+
+This marks the initial occurrence of this IP address being used within the organization. IPv6 addresses are subject to dynamic changes based on configured parameters. Additionally, it’s important to note that IP geolocation is associated with the IP address itself rather than a physical location. As a result, the displayed location may align with that of the Internet Service Provider (ISP). This disparity in information could potentially contribute to triggering the alert.
+
+This apears to be a service account, the customer is permitting conditional access using Single-factor authentication. We advise our customers to transition to modern authentication. The audit logs show no signs of suspicious activity, and there is no evidence of a compromised user account. We will maintain ongoing monitoring of the account.
+
+The user agent BAV2ROPC employs single-factor authentication. This client app, which utilizes Authenticated SMTP, is associated with legacy protocols such as POP3, IMAP, and SMTP legacy. These legacy client apps have the capability to understand and store passwords if the user has logged into them at some point.
+
+
+
+------------------------------------------------------
+Audit and Sign-in logs indicate no suspicious activity. No evidence of compromised user accounts. We will continue to monitor accounts. 
+
+Closing Notes:
+This alert involved two (2) entities
+
+and
+
+Reviewed sign-in logs and Audit logs observed no indication of suspicious activity.  No evidence of compromised user accounts. We will continue to monitor accounts.  
+
+--------------------------------------------------------------
+Your IP address, that unique numerical identifier allowing devices to communicate on the internet, might sometimes seem to reflect a different location than where you physically are. Let’s explore some of the main factors affecting IP address geolocation:
+
+Outdated IP Geolocation Databases: Geolocation databases are continuously updated, but they may not always have the most recent information. As a result, they might associate your IP address with a general location based on historical data, leading to discrepancies
+
+Use of Proxy Servers or VPNs: Proxy servers and virtual private networks (VPNs) can mask the original IP address and route internet traffic through servers in different locations. When a geolocation service attempts to determine your location based on your IP address, it may associate the IP address with a general location based on the IP range used by your mobile network provider. As a result, the actual physical location may not match the location provided by the geolocation service.
+
+Shared IP Addresses: If multiple users share the same IP address (such as in public Wi-Fi networks), geolocation services might associate that IP with a central location, which may not accurately represent your specific whereabouts.
+
+ISP Routing Errors: Internet service providers (ISPs) handle routing of internet traffic, and sometimes their routing tables can lead to inaccuracies in IP address location.
+
+Mobile Network Providers: When using mobile data, your IP address may be associated with the location of your mobile network provider’s server, rather than your precise location.
+
+Privacy Concerns: Some users intentionally use tools like VPNs or proxies to protect their privacy, which can alter the perceived location of their IP address.
+
+Remember that IP geolocation is not always 100% accurate, and various factors can contribute to discrepancies between your actual location and the location displayed by some platforms. If accuracy is crucial, consider using additional location verification methods, such as GPS data from mobile devices, to enhance precision
+------------------------------------------------------
+Notes on SPROUT accounts: 
+Per Jesse Precht 3/28/2023 email-"the sprout_admin accounts are used for application testing across the team members. "
+ 3/31/2023 email -"we have contractors located in Costa Rica that make use of the shared sprout_admin accounts for application testing"
+
+"The sign-in logs show that there have been many sign-in attempts from IP addresses located all over the world. This is an expected behavior as the sprout_admin accounts are used for application testing across team members. Since this is a service account, the customer has permitted single-factor authentication. Single-factor authentication is a security process that requires only one form of verification, such as a password, to gain access to online resources. It is a simple and common method of authentication, but it is also the least secure as it only requires one factor for verification. It is recommended to use multi-factor authentication (MFA) or two-factor authentication (2FA) for added security."
+
+“The sign-in records for the user ______ indicate numerous login attempts originating from IP addresses worldwide. This behavior is expected, as the sprout_admin accounts serve application testing purposes across team members. Given that this is a service account, the customer has authorized single-factor authentication. Single-factor authentication is a basic and widely used security method that requires only one form of verification, typically a password, to access online resources. However, it is considered less secure because it relies on a single factor. For enhanced security, it is recommended to adopt multi-factor authentication (MFA) or two-factor authentication (2FA).”
+
+
+

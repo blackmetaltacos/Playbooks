@@ -1,0 +1,58 @@
+ A potentially malicious URL click was detected
+-------------------------
+Microsoft Defender for Office 365
+
+Email Details:
+
+Authentication:
+
+URLs:
+
+Attachments:
+
+------------------------------------------------------
+Sender Domain Analysis 
+---------------------------------------------------
+Sender IP Analysis - 
+
+Source		abuseipdb.com
+__________________________
+SUMMARY OF FINDINGS
+__________________________ 
+A potentially malicious URL click was detected 
+
+Investigation Findings: 
+We have detected that one of your users has recently clicked on a link that was found to be malicious.
+
+User has interacted with a confirmed malicious URL, and requires remedial actioning. 
+We've scoped surrounding logon activity for user and found no external attempts or signs of tampering at this time.
+
+Details for Email Containing URLs:
+Subject:	
+
+Possible Malicious URL (defanged):
+
+Findings: "e.g. 1 security vendor flagged this URL as malicious (VirusTotal)"
+
+We have scoped surrounding logon activity and found no external attempts or signs of tampering at this time.
+
+Recommended Actions/Next Steps:  
+As a precautionary measure, Coretek SOC is recommending the following take place:
+
+- Notification of the incident to the end user
+- Reset user credentials 
+- Revoke existing sessions
+
+Resolution: 
+The malicious URL, original message and the sender are correctly flagged in Defender - no further actions are required for containment. 
+
+Temp Pwd:
+
+Additional Notes:  
+Remeber to add screenshots
+
+
+
+
+
+

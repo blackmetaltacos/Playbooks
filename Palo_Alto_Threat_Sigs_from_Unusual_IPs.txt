@@ -1,0 +1,62 @@
+Palo Alto Threat signatures from Unusual IP addresses
+
+Investigation Findings:  
+Identifies Palo Alto Threat signatures from unusual IP addresses which are not historically seen. This detection is also leveraged and required for MDE and PAN Fusion. 
+
+SourceIP		
+DeviceAction		
+DeviceProduct		
+DeviceVendor		
+TotalEvents		
+ThreatTypes		
+DestinationIpList		
+FirstSeen [UTC]		
+LastSeen [UTC]			
+
+Destination IPs:
+
+
+source		AbuseIpDb.com
+
+Identifies Palo Alto Threat signatures from unusual IP addresses which are not historically seen. This detection is also leveraged and required for MDE and PAN Fusion scenario https://docs.microsoft.com/Azure/sentinel/fusion-scenario-reference#network-request-to-tor-anonymization-service-followed-by-anomalous-traffic-flagged-by-palo-alto-networks-firewall.
+
+Fusion incidents of this type may indicate that an outbound connection request was made to a TOR anonymization service, and following that, anomalous inbound activity was detected by the Palo Alto Networks Firewall. This evidence may suggest that an attacker has gained access to your network and is trying to conceal their actions and intent. 
+
+I reviewed event query logs. No TOR anonymization services observed. Source IPs are private, Destination IPs, have not been flagged for malicious history. 	
+											
+IP address xxxx is connected to an ________ ISP. 	
+
+The other IP address, xxxx, is a Microsoft data center This service provides updates for devices with applications that reach out for update checks. 
+					
+Traffic reviewed, no evidence of malicious activity.  
+---------------------------------
+The source IPs are recognized as malicious, but the ultimate connection remains unsuccessful (as indicated by the device event “end”). After thorough review, no signs of malicious artifacts have been detected in the traffic.
+---------------------------------
+
+Recommended Actions/Next Steps:  
+No recommended actions at this time. Event is Benign.
+
+Resolution:
+No further actions are required for containment. 
+
+Additional Notes:
+Check IP traffic and confirm that it has been denied/reet/ or dropped by Firewall.
+
+An Edgecast Content Delivery Network IP address. xxx is an IP address from within AbuseIP.com's whitelist. Whitelisted netblocks are typically owned by trusted entities, such as Google or Microsoft who may use them for search engine spiders. However, these same entities sometimes also provide cloud servers and mail services which are easily abused. Pay special attention when trusting or distrusting these IPs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Additional Notes: 
