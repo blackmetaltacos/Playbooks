@@ -1,0 +1,31 @@
+Attestation failed on your virtual machine
+(PacMed)
+
+Affected Party/ies:
+(look at Defender for more complete info)
+
+Description of Alert:
+Attestation failed on your virtual machine
+
+Investigation Findings:  
+The integrity of your VM’s critical components does not match the trusted baseline or cannot be securely established.
+
+Attestation failed on your virtual machine on a cloud resource.
+EffectiveAzureResourceId	(This info includes subscription info)
+CompromisedEntity		
+ProductComponentName		
+EffectiveSubscriptionId		
+
+Defender Antivirus is not active, Last Full scan and and last quick scan status is unknown. I concur with Alan that additional permissions may be needed to properly investigate. Closing alert. (Defender device info will tell you lastest user, device status, health, and timeline)
+
+Recommended Actions/Next Steps:  
+Defender Antivirus is not active, Last Full scan and and last quick scan status is unknown.
+Scan your machine to ensure no malware or other malicious software is present.
+ (Here include info device status, recommendations, and any pertinent vulnerabilities found, eg., not vulnerable to CVE-2024-1086)
+
+Resolution:
+No further actions are required for containment. 
+
+Additional Notes: 
+(remeber to include relevant screenshots)
+Submitted for tuning.
